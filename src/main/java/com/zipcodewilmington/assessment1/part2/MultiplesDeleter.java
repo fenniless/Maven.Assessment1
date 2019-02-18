@@ -10,7 +10,17 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        Integer[] newArray = new Integer[ints.length/2];
+        int newArrayBuilder = 0;
+        for(int i = 0 ; i<ints.length; i++){
+
+            if (ints[i]%2 != 0){
+                newArray[newArrayBuilder]=ints[i];
+                newArrayBuilder++;
+            }
+        }
+        System.out.println(newArray.toString());
+        return newArray;
     }
 
     /**
@@ -19,7 +29,17 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        Integer[] newArray = new Integer[ints.length/2];
+        int newArrayBuilder = 0;
+        for(int i = 0 ; i<ints.length; i++){
+
+            if (ints[i]%2 == 0){
+                newArray[newArrayBuilder]=ints[i];
+                newArrayBuilder++;
+            }
+        }
+        System.out.println(newArray.toString());
+        return newArray;
     }
 
     /**
@@ -28,7 +48,27 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        int newArrayLength = 0;
+
+        for(int i = 0 ; i < ints.length; i++){
+            if((ints[i]/3)%2 == 0){
+                newArrayLength++;
+
+            }
+        }  if (!ints[ints.length-1].equals(ints[ints.length-2])){
+            newArrayLength++;
+        }
+        Integer[] newArray = new Integer[newArrayLength];
+        int newArrayBuilder = 0;
+        for(int i = 0 ; i<ints.length; i++){
+
+            if ((ints[i]%3) != 0){
+                newArray[newArrayBuilder]=ints[i];
+                newArrayBuilder++;
+            }
+        }
+        System.out.println(newArray.toString());
+        return newArray;
     }
 
     /**
@@ -38,6 +78,26 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+        int newArrayLength = -1;
+
+        for(int i = 0 ; i < ints.length; i++){
+            if(ints[i]%multiple != 0){
+                newArrayLength++;
+
+            }
+        }  if (!ints[ints.length-1].equals(ints[ints.length-2])){
+            newArrayLength++;
+        }
+        Integer[] newArray = new Integer[newArrayLength];
+        int newArrayBuilder = 0;
+        for(int i = 0 ; i<ints.length; i++){
+
+            if (ints[i]%multiple != 0){
+                newArray[newArrayBuilder]=ints[i];
+                newArrayBuilder++;
+            }
+        }
+        System.out.println(newArray.toString());
+        return newArray;
     }
 }
