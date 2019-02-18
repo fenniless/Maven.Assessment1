@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part1;
 
+import static com.zipcodewilmington.assessment1.part1.BasicStringUtils.reverse;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,7 +13,11 @@ public class IntegerUtils {
      * @return the sum of all integers between 0 and not including `n`
      */
     public static Integer getSumOfN(Integer n) {
-        return null;
+        int j = 0;
+        for(int i = 0 ; i <= n ; i++){
+            j +=i;
+        }
+        return j;
     }
 
     /**
@@ -19,7 +25,11 @@ public class IntegerUtils {
      * @return the product of all integers between 0 and not including `n`
      */
     public static Integer getProductOfN(Integer n) {
-        return null;
+        int j = 1;
+        for(int i = 1 ; i <= n ; i++){
+            j *=i;
+        }
+        return j;
     }
 
     /**
@@ -27,6 +37,8 @@ public class IntegerUtils {
      * @return integer with identical digits in the reverse order
      */
     public static Integer reverseDigits(Integer val) {
-        return null;
+        String rev = reverse(val.toString());
+
+        return Integer.valueOf(rev);
     }
 }
