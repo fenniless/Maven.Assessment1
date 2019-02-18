@@ -9,15 +9,20 @@ import java.util.List;
  */
 public class PetOwner {
     private String name;
-    private ArrayList<Pet> pets = new ArrayList<>();
-
-
+    private int age;
+    private ArrayList<Pet> pets = new ArrayList<Pet>();
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
-        super();
+        this.name = name;
+        if(pets != null && pets.length>0) {
+
+            this.pets = new ArrayList<>();
+
+
+        }
 
     }
 
@@ -60,6 +65,8 @@ public class PetOwner {
      */
     public Integer getOldestPetAge() {
 
+
+
         return null;
     }
 
@@ -77,7 +84,7 @@ public class PetOwner {
      */
     public Integer getNumberOfPets() {
 
-        return null;
+        return pets.size();
     }
 
     /**
@@ -85,7 +92,7 @@ public class PetOwner {
      */
     public String getName() {
 
-        return null;
+        return name;
     }
 
     /**
@@ -93,6 +100,7 @@ public class PetOwner {
      */
     public Pet[] getPets() {
 
-        return null;
+
+        return pets.toArray(new Pet[0]);
     }
 }
